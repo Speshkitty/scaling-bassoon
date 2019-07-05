@@ -1,12 +1,55 @@
 <html>
   <head>
-    <script source="js.js"></script>
+    <script src="js.js"></script>
     <link rel="stylesheet" type="text/css" href="css.css">
-    <title>Test Page</title>
+    <title>Terraforming Mar Generator</title>
   </head>
   <body>
-    <h1>H1 test</h1>
-    <p>Paragraph.</p>
-    <p class="style">Styled paragraph.</p>
+    <form>
+      Number of players:
+      <select id="players">
+        <option>1</option>
+        <option selected>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+        <option>6</option>
+        <option>7</option>
+        <option>8</option>
+      </select>
+      <br>
+      Allow certain combinations of awards and milestones<input type="checkbox" id="conflicts"><br>
+      Number of boards:
+      <select id="boards">
+        <option selected>1</option>
+        <option>2</option>
+        <option>3</option>
+      </select><br>
+      Number of awards:
+      <select id="awards">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+        <option selected>6</option>
+        <option>7</option>
+        <option>8</option>
+      </select><br>
+      Number of milestones:
+      <select id="milestones">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+        <option selected>6</option>
+        <option>7</option>
+        <option>8</option>
+      </select><br>
+      <input type="button" value="Generate!" onClick="Main(document.getElementById('players').value,document.getElementById('boards').value, document.getElementById('awards').value,document.getElementById('milestones').value,document.getElementById('conflicts').value)">
+    </form>
+    <p></p>
+    <p id="output"></p>
   </body>
 </html>
