@@ -34,31 +34,31 @@ function Main(numberOfPlayers, numberOfBoards, numberOfAwards, numberOfMilestone
   console.log("Milestones: " + selectedMilestones);
   console.log("Colonies: " + selectedColonies);
   var outputNode = document.getElementById("output");
-  var TextToAdd =    "<ol>Board:";
+  var TextToAdd =    "<ol class='boardList'>Board:";
   for(var i=0;i<selectedBoards.length;i++)
   {
-    TextToAdd += "<li>" + selectedBoards[i] + "</li>";
+    TextToAdd += "<li class='boardItem'>" + selectedBoards[i] + "</li>";
   }
   TextToAdd += "</ol>";
   
-  TextToAdd += "<ol>Colonies:";
+  TextToAdd += "<ol class='colonyList'>Colonies:";
   for(var i=0;i<selectedColonies.length;i++)
   {
-    TextToAdd += "<li>" + selectedColonies[i] + "</li>";
+    TextToAdd += "<li class='colonyItem'>" + selectedColonies[i] + "</li>";
   }
   TextToAdd += "</ol>";
   
-  TextToAdd += "<ol>Awards:";
+  TextToAdd += "<ol class='awardList'>Awards:";
   for(var i=0;i<selectedAwards.length;i++)
   {
-    TextToAdd += "<li>" + selectedAwards[i] + "</li>";
+    TextToAdd += "<li class='awardItem'>" + selectedAwards[i] + "</li>";
   }
   TextToAdd += "</ol>";
   
-  TextToAdd += "<ol>Milestones:";
+  TextToAdd += "<ol class='milestoneList'>Milestones:";
   for(var i=0;i<selectedMilestones.length;i++)
   {
-    TextToAdd += "<li>" + selectedMilestones[i] + "</li>";
+    TextToAdd += "<li class='milestoneItem'>" + selectedMilestones[i] + "</li>";
   }
   TextToAdd += "</ol>";
   
