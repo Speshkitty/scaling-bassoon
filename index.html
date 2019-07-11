@@ -1,55 +1,88 @@
 <html>
-  <head>
-    <script src="js.js"></script>
-    <link rel="stylesheet" type="text/css" href="css.css">
-    <title>Terraforming Mars Generator</title>
-  </head>
-  <body>
-    <form>
-      Number of players:
-      <select id="players">
-        <option>1</option>
-        <option selected>2</option>
-        <option>3</option>
-        <option>4</option>
-        <option>5</option>
-        <option>6</option>
-        <option>7</option>
-        <option>8</option>
-      </select>
-      <br>
-      Allow certain combinations of awards and milestones<input type="checkbox" id="conflicts"><br>
-      Number of boards:
-      <select id="boards">
-        <option selected>1</option>
-        <option>2</option>
-        <option>3</option>
-      </select><br>
-      Number of awards:
-      <select id="awards">
-        <option>1</option>
-        <option>2</option>
-        <option>3</option>
-        <option>4</option>
-        <option>5</option>
-        <option selected>6</option>
-        <option>7</option>
-        <option>8</option>
-      </select><br>
-      Number of milestones:
-      <select id="milestones">
-        <option>1</option>
-        <option>2</option>
-        <option>3</option>
-        <option>4</option>
-        <option>5</option>
-        <option selected>6</option>
-        <option>7</option>
-        <option>8</option>
-      </select><br>
-      <input type="button" value="Generate!" onClick="Main(document.getElementById('players').value,document.getElementById('boards').value, document.getElementById('awards').value,document.getElementById('milestones').value,document.getElementById('conflicts').value)">
+
+<head>
+  <script src="js.js"></script>
+  <link rel="stylesheet" type="text/css" href="css.css">
+  <link rel="stylesheet" type="text/css" href="icofont/icofont.min.css">
+  <title>Terraforming Mars Generator</title>
+</head>
+
+<body>
+  <div class="content">
+
+    <form id="settings">
+      <p class="line">
+        <i class="icon icofont-ui-user"></i>
+        <label for="players">Number of players</label>
+        <select class="input" id="players">
+          <option>1</option>
+          <option selected>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+          <option>6</option>
+          <option>7</option>
+          <option>8</option>
+        </select>
+      </p>
+
+      <p class="line">
+        <i class="icon icofont-globe"></i>
+        <label for="boards">Number of boards</label>
+        <select class="input" id="boards">
+          <option selected>1</option>
+          <option>2</option>
+          <option>3</option>
+        </select>
+      </p>
+
+      <p class="line">
+        <i class="icon icofont-trophy"></i>
+        <label for="awards">Number of awards</label>
+        <select class="input" id="awards">
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+          <option selected>6</option>
+          <option>7</option>
+          <option>8</option>
+        </select>
+      </p>
+
+      <p class="line">
+        <i class="icon icofont-badge"></i>
+        <label for="milestones">Number of milestones</label>
+        <select class="input" id="milestones">
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+          <option selected>6</option>
+          <option>7</option>
+          <option>8</option>
+        </select>
+      </p>
+
+      <p class="line">
+        <i class="icon icofont-exchange"></i>
+        <label for="conflicts"><abbr
+            title="The generator automatically blocks certain combinations of awards and milestones that conflict with each other - such as Builder/Contractor. Check this box to disable that behaviour and allow any combination.">
+            Conflicting awards/milestones
+          </abbr></label>
+        <span class="input"><input type="checkbox" id="conflicts" /></span>
+      </p>
+
+      <p class="button-line">
+        <button value="Generate!" class="input generate icofont-dice" type="button"
+          onClick="Main(document.getElementById('players').value,document.getElementById('boards').value, document.getElementById('awards').value,document.getElementById('milestones').value,document.getElementById('conflicts').value)">Generate!</button>
+      </p>
     </form>
-    <p></p>
-    <p id="output"></p>
-  </body>
+    <p id="output">Enter your settings above and hit generate!</p>
+    <div id="footer">Terraforming Mars Setup Randomiser&emsp;&mdash;&emsp;By <a href="https://github.com/Speshkitty">Speshkitty</a>&emsp;&mdash;&emsp;With Styling From <a href="https://github.com/Avisgratis">Avisgratis</a></p>
+  </div>
+</body>
+
 </html>
