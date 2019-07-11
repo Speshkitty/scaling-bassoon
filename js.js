@@ -30,9 +30,9 @@ function Main(numberOfPlayers, numberOfBoards, numberOfAwards, numberOfMilestone
     }
   }
   console.log("Boards: " + selectedBoards);
-  console.log("Awards: " + selectedAwards);
-  console.log("Milestones: " + selectedMilestones);
   console.log("Colonies: " + selectedColonies);
+  console.log("Milestones: " + selectedMilestones);
+  console.log("Awards: " + selectedAwards);
   var outputNode = document.getElementById("output");
   var TextToAdd =    "<ol class='boardList'><li class='header icofont-globe'> Board:</li>";
   for(var i=0;i<selectedBoards.length;i++)
@@ -48,6 +48,13 @@ function Main(numberOfPlayers, numberOfBoards, numberOfAwards, numberOfMilestone
   }
   TextToAdd += "</ol>";
   
+  TextToAdd += "<ol class='milestoneList'><li class='header icofont-badge'> Milestones:</li>";
+  for(var i=0;i<selectedMilestones.length;i++)
+  {
+    TextToAdd += "<li class='milestoneItem'>" + selectedMilestones[i] + "</li>";
+  }
+  TextToAdd += "</ol>";
+  
   TextToAdd += "<ol class='awardList'><li class='header icofont-trophy'> Awards:</li>";
   for(var i=0;i<selectedAwards.length;i++)
   {
@@ -55,12 +62,6 @@ function Main(numberOfPlayers, numberOfBoards, numberOfAwards, numberOfMilestone
   }
   TextToAdd += "</ol>";
   
-  TextToAdd += "<ol class='milestoneList'><li class='header icofont-badge'> Milestones:</li>";
-  for(var i=0;i<selectedMilestones.length;i++)
-  {
-    TextToAdd += "<li class='milestoneItem'>" + selectedMilestones[i] + "</li>";
-  }
-  TextToAdd += "</ol>";
   
   outputNode.innerHTML =TextToAdd;
   console.log( outputNode.innerHTML);

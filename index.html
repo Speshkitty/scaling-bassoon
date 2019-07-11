@@ -37,9 +37,9 @@
       </p>
 
       <p class="line">
-        <i class="icon icofont-trophy"></i>
-        <label for="awards">Number of awards</label>
-        <select class="input" id="awards">
+        <i class="icon icofont-badge"></i>
+        <label for="milestones">Number of milestones</label>
+        <select class="input" id="milestones">
           <option>1</option>
           <option>2</option>
           <option>3</option>
@@ -52,9 +52,9 @@
       </p>
 
       <p class="line">
-        <i class="icon icofont-badge"></i>
-        <label for="milestones">Number of milestones</label>
-        <select class="input" id="milestones">
+        <i class="icon icofont-trophy"></i>
+        <label for="awards">Number of awards</label>
+        <select class="input" id="awards">
           <option>1</option>
           <option>2</option>
           <option>3</option>
@@ -77,10 +77,10 @@
 
       <p class="button-line">
         <button value="Generate!" class="input generate icofont-dice" type="button"
-          onClick="Main(document.getElementById('players').value,document.getElementById('boards').value, document.getElementById('awards').value,document.getElementById('milestones').value,document.getElementById('conflicts').value)">Generate!</button>
+          onClick="Main(document.getElementById('players').value,document.getElementById('boards').value, document.getElementById('awards').value,document.getElementById('milestones').value,document.getElementById('conflicts').checked)">Generate!</button>
       </p>
     </form>
-    <p id="output">Enter your settings above and hit generate!</p>
+    <div id="output">Enter your settings above and hit generate!</div>
     <div id="footer">Terraforming Mars Setup Randomiser&emsp;&mdash;&emsp;By <a href="https://github.com/Speshkitty">Speshkitty</a>&emsp;&mdash;&emsp;With Styling From <a href="https://github.com/Avisgratis">Avisgratis</a></p>
   </div>
 </body>

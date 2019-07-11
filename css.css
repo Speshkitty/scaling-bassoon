@@ -56,6 +56,18 @@ div.content {
     text-align: center;
 }
 
+#settings .line select {
+    border-radius: 15px;
+    padding: 5px;
+    background-color: #eeeeee;
+    border: 1px solid #555555;
+}
+
+#settings select:focus, #settings button:focus, #settings input:focus {
+    outline: none;
+    box-shadow: 0 0 2pt 1pt #555599;
+}
+
 #settings .line input[type="checkbox"] {
     width: 15px;
     height: 15px;
@@ -63,6 +75,9 @@ div.content {
 
 #settings .generate {
     font-size: 1.5em;
+    border-radius: 15px;
+    padding: 10px;
+    border: 1px solid #555555;
 }
 
 #output {
@@ -72,6 +87,10 @@ div.content {
 
 #output li {
     list-style: none;
+}
+
+#output li:not(.header) {
+    margin-left: 2em;
 }
 
 #output li.header {
@@ -86,6 +105,7 @@ div.content {
 #footer {
     text-align: center;
     font-size: 0.6em;
+    margin: 35px;
 }
 
 #footer a {
@@ -107,7 +127,9 @@ div.content {
 @media screen and (max-width: 1000px) {
 
     body {
-        font-size: 1.25em
+        font-size: 1.5em;
+        padding-bottom: 50px;
+        height: 110%;
     }
 
     div.content {
@@ -122,11 +144,22 @@ div.content {
     }
 
     #settings .line {
-        width: 350px;
+        width: 400px;
         height: 100px;
+        grid-row-gap: 10px;
+        grid-column-gap: 20px;
+        margin: 10px;
     }
 
-    .generate {
+    #settings .line label {
+        grid-column: 1 / span 2;
+    }
+
+    #settings .line .icon {
+        grid-row: 2 / span 1;
+    }
+
+    #settings .generate {
         width: 350px;
         height: 100px;    
     }
@@ -148,4 +181,8 @@ div.content {
         min-width: 400px;
         min-height: 0;
     }    
+
+    #output ol {
+        width: 400px;
+    }
 }
