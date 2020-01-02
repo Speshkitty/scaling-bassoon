@@ -1,7 +1,7 @@
 var boardsMaster = ["Standard", "Elysium", "Hellas"];
 var coloniesMaster = ["Callisto", "Ceres", "Enceladus", "Europa", "Ganymede", "Io", "Luna", "Miranda", "Pluto", "Titan", "Triton"];
 var milestonesMaster = ["Builder", "Diversifier", "Ecologist", "Energizer", "Gardener", "Generalist", "Hoverlord", "Legend", "Mayor", "Planner", "Polar Explorer", "Rim Settler", "Specialist", "Tactician", "Terraformer", "Tycoon"];
-var awardsMaster = ["Banker", "Benefactor", "Celebrity", "Contractor", "Cultivator", "Desert Settler", "Estate Dealer", "Excentric", "Global Warmer", "Industrialist", "Landlord", "Magnate", "Miner", "Scientist", "Space Baron", "Venuphile"];
+var awardsMaster = ["Banker", "Benefactor", "Celebrity", "Contractor", "Cultivator", "Desert Settler", "Estate Dealer", "Excentric", "Thermalist/Global Warmer", "Industrialist", "Landlord", "Magnate", "Miner", "Scientist", "Space Baron", "Venuphile"];
 
 
 
